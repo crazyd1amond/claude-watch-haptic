@@ -81,6 +81,24 @@ Wait ~8 seconds → Watch vibrates → reminder auto‑deletes after 15s.
 - `README.md` – This documentation
 - `.gitignore` – Ignores macOS temporary files
 
+### Publishing to GitHub
+
+This repository is already initialized as a Git repository. To publish it to GitHub:
+
+1. **Create a new repository** on [GitHub](https://github.com/new)
+   - Repository name: e.g., `claude-watch-haptic`
+   - Keep it public or private as you prefer
+   - **Do not** initialize with README, .gitignore, or license (we already have them)
+
+2. **Add the remote and push**
+   ```bash
+   git remote add origin https://github.com/YOUR_USERNAME/claude-watch-haptic.git
+   git branch -M main
+   git push -u origin main
+   ```
+
+3. **Update the clone URL** in the "Setup" section above to match your actual GitHub URL.
+
 ### Why 8 Seconds?
 iCloud sync takes 2–5 seconds. If the reminder’s due time is “now”, it arrives overdue and iOS skips the notification. Setting it 8 seconds ahead ensures the notification fires after sync.
 
@@ -165,6 +183,24 @@ ln -sf "$(pwd)/buzz.sh" ~/ccremind/buzz.sh
 - `buzz.sh` – 核心 AppleScript，创建/删除 iCloud 提醒
 - `README.md` – 本文档
 - `.gitignore` – 忽略 macOS 临时文件
+
+### 发布到 GitHub
+
+本仓库已初始化为 Git 仓库。要发布到 GitHub：
+
+1. **在 [GitHub](https://github.com/new) 上创建新仓库**
+   - 仓库名称：例如 `claude-watch-haptic`
+   - 公开或私有按需选择
+   - **不要**初始化 README、.gitignore 或许可证（我们已经有了）
+
+2. **添加远程仓库并推送**
+   ```bash
+   git remote add origin https://github.com/你的用户名/claude-watch-haptic.git
+   git branch -M main
+   git push -u origin main
+   ```
+
+3. **更新“安装配置”部分的克隆 URL**，改为你实际的 GitHub URL。
 
 ### 为什么是 8 秒？
 iCloud 同步需要 2–5 秒。如果提醒的到期时间设为“现在”，等提醒到达 iPhone 时已过期，iOS 会静默跳过通知。设为 8 秒后到期可确保同步完成后才触发通知。
