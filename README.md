@@ -184,23 +184,6 @@ ln -sf "$(pwd)/buzz.sh" ~/ccremind/buzz.sh
 - `README.md` – 本文档
 - `.gitignore` – 忽略 macOS 临时文件
 
-### 发布到 GitHub
-
-本仓库已初始化为 Git 仓库。要发布到 GitHub：
-
-1. **在 [GitHub](https://github.com/new) 上创建新仓库**
-   - 仓库名称：例如 `claude-watch-haptic`
-   - 公开或私有按需选择
-   - **不要**初始化 README、.gitignore 或许可证（我们已经有了）
-
-2. **添加远程仓库并推送**
-   ```bash
-   git remote add origin https://github.com/crazyd1amond/claude-watch-haptic.git
-   git branch -M main
-   git push -u origin main
-   ```
-
-3. **克隆 URL 已更新**，匹配你的 GitHub URL。
 
 ### 为什么是 8 秒？
 iCloud 同步需要 2–5 秒。如果提醒的到期时间设为“现在”，等提醒到达 iPhone 时已过期，iOS 会静默跳过通知。设为 8 秒后到期可确保同步完成后才触发通知。
